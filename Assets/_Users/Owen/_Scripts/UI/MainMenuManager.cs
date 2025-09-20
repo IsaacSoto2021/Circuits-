@@ -19,8 +19,8 @@ public class MainMenuManager : MonoBehaviour
     }
     public void ClickQuit()
     {
-        Application.Quit();
         print("Quit Game");
+        Application.Quit();
     }
     public void ClickPlay()
     {
