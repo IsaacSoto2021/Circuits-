@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            PlayerData.Instance._currency++;
+            PlayerData.Instance._scrap++;
         }
     }
 }

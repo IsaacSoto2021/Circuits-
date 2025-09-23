@@ -6,7 +6,17 @@ using UnityEngine;
 public class PlayerData : Singleton<PlayerData>
 {
     public int _maxHp = 100;
+    public int _Hp = 0;
     public int _hpTier = 1;
-    public int _currency = 20;
+    public int _scrap = 0;
 
+    public void Spawn()
+    {
+        _Hp = _maxHp;
+    }
+
+    private void Start()
+    {
+        Spawn();
+    }
 }

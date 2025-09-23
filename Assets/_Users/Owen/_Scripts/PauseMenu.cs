@@ -40,7 +40,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Return()
     {
-        _ConfirmAbandonCanvas?.SetActive(false);
+        _ConfirmAbandonCanvas.SetActive(false);
     }
 
     public void QuitGame()
