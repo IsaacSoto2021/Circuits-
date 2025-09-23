@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     public GameObject _PauseCanvas;
     public GameObject _HUDCanvas;
+    public GameObject _ConfirmAbandonCanvas;
 
     void Update()
     {
@@ -28,7 +30,17 @@ public class PauseMenu : MonoBehaviour
 
     public void Abandon()
     {
+        _ConfirmAbandonCanvas.SetActive(true);
+    }
 
+    public void ConfirmAbandon()
+    {
+        SceneManager.LoadSceneAsync(0);
+    }
+
+    public void Return()
+    {
+        _ConfirmAbandonCanvas?.SetActive(false);
     }
 
     public void QuitGame()
