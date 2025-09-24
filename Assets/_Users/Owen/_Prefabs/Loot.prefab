@@ -186,6 +186,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ScrapPrefab: {fileID: 6531820270604226453, guid: 2c0677d7a6b8f7649b48e7798094306e,
     type: 3}
+  _SpawnPos1: {fileID: 3203683368212557436}
+  _SpawnPos2: {fileID: 3595658323485742809}
+  _SpawnPos3: {fileID: 9019124833108662301}
+  _SpawnPos4: {fileID: 2392667545067614144}
 --- !u!1 &3064380908176934651
 GameObject:
   m_ObjectHideFlags: 0

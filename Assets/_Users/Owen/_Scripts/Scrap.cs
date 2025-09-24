@@ -10,6 +10,7 @@ public class Scrap : MonoBehaviour
         {
             PlayerData.Instance._scrap++;
             print("Your scrap is: " + PlayerData.Instance._scrap);
+            Destroy(gameObject);
         }
     }
 }
