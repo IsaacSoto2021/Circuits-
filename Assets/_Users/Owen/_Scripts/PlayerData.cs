@@ -10,6 +10,8 @@ public class PlayerData : Singleton<PlayerData>
     public int _hpTier = 1;
     public int _scrap = 0;
 
+    public bool _hasKeycard;
+
     public void Spawn()
     {
         _Hp = _maxHp;

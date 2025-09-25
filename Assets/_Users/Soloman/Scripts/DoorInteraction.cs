@@ -7,6 +7,7 @@ public class DoorInteraction : MonoBehaviour
 {
     private bool playerInside = false;
     public bool hasLock = false;
+    public bool hasKeycardLock = false;
     public GameObject targetGameObject;
 
     public TextMeshProUGUI textElement;
@@ -42,6 +43,11 @@ public class DoorInteraction : MonoBehaviour
 
                 // Flash the sequence to player
                 StartCoroutine(ShowSequence());
+            }
+            else if (hasKeycardLock)
+            {
+                PlayerData.Instance._hasKeycard = false;
+                UnlockDoor();
             }
             else
             {
