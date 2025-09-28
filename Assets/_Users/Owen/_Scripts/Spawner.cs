@@ -5,8 +5,10 @@ using UnityEngine.AI;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject _enemyToSpawn;
-    public int _numEnemies;
+    public GameObject _enemy1;
+    public GameObject _enemy2;
+    public GameObject _enemy3;
+    public GameObject _enemy4;
     public Transform _enemySpawn;
 
     // Start is called before the first frame update
@@ -27,19 +29,10 @@ public class Spawner : MonoBehaviour
 
     public void SpawnEnemy()
     {
-        for (int j = 0; j < _numEnemies; j++)
-        {
-            GameObject _enemySpawned = Instantiate(_enemyToSpawn, _enemySpawn);
-            NavMeshAgent agent = _enemySpawned.GetComponent<NavMeshAgent>();
-            if (agent != null)
-            {
-                NavMeshHit hit;
-                if (NavMesh.SamplePosition(_enemySpawn.position, out hit, 1.0f, NavMesh.AllAreas))
-                {
-                    agent.Warp(hit.position);
-                }
-            }
-        }
+        _enemy1.SetActive(true);
+        _enemy2.SetActive(true);
+        _enemy3.SetActive(true);
+        _enemy4.SetActive(true);
     }
 
 }
