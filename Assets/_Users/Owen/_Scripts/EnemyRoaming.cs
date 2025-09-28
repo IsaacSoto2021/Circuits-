@@ -5,10 +5,11 @@ using UnityEngine.AI;
 
 public class RandomMovement : MonoBehaviour
 {
+    public Spawner _roamPointRef;
     public NavMeshAgent agent;
-    public float _range; //radius of sphere
-    public float _distance; //radius of sight sphere
-    public float _chaseRange; //radius of chase
+    public float _range = 10; //radius of sphere
+    public float _distance; //distance to player
+    public float _chaseRange = 15; //radius of chase
 
     public Transform _centrePoint; //centre of the area the agent wants to move around in
 
@@ -28,6 +29,9 @@ public class RandomMovement : MonoBehaviour
         _roaming = true;
         _chasing = false;
         _player = PlayerData.Instance.transform;
+        _roamPointRef = GetComponent<Spawner>();
+        _centrePoint = _roamPointRef._enemySpawn;
+
     }
 
     void Update()
@@ -40,7 +44,7 @@ public class RandomMovement : MonoBehaviour
             ChasePlayer();
         }
 
-        if ((agent.remainingDistance <= agent.stoppingDistance) && _roaming) //done with path
+        if ((agent.remainingDistance <= agent.stoppingDistance) && _roaming && _roamPointRef != null) //done with path
         {
             Vector3 point;
             if (RandomPoint(_centrePoint.position, _range, out point)) //pass in our centre point and radius of area

@@ -25,7 +25,6 @@ public class MainMenuManager : MonoBehaviour
     public void ClickPlay()
     {
         SceneManager.LoadSceneAsync(1);
-        print(PlayerData.Instance._maxHp);
     }
     public void ClickShop()
     {
