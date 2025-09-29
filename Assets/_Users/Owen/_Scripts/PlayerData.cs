@@ -9,6 +9,7 @@ public class PlayerData : Singleton<PlayerData>
     public int _Hp = 0;
     public int _hpTier = 1;
     public int _scrap = 0;
+    public int _damage = 60;
 
     public bool _hasKeycard;
 

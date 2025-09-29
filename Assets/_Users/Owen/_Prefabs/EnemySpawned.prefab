@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 1727064841656949276}
   - component: {fileID: 2574354691500708786}
   - component: {fileID: 8772458663100312125}
+  - component: {fileID: -2427002939584181744}
   m_Layer: 0
   m_Name: EnemySpawned
   m_TagString: Enemy
@@ -197,7 +198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5471833bd259fc94181a60fc91e674b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _roamPointRef: {fileID: 0}
   agent: {fileID: 8772458663100312125}
   _range: 8
   _distance: 0
@@ -227,3 +227,16 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &-2427002939584181744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4575170824705823726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc5778adbaf19314da2dd7fb1d6b7467, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _HP: 100
