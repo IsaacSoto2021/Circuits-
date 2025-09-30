@@ -5,14 +5,15 @@ using UnityEngine;
 public class EnemyHPSystem : MonoBehaviour
 {
     public int _HP = 100;
+    public int _Damage = 20;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        GameObject hitObject = collision.gameObject;
-        if (hitObject.CompareTag("PlayerProjectile"))
+        if (collision.CompareTag("PlayerProjectile"))
         {
             TakeDamage();
         }
+
     }
     public void TakeDamage()
     {

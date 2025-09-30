@@ -10,19 +10,12 @@ public class PlayerProjectile : MonoBehaviour
     {
         Destroy(gameObject, lifetime);
     }
-
-    void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        GameObject hitObject = collision.gameObject;
-
-        if (hitObject.CompareTag("Enemy"))
+        if (collision.CompareTag("EnemyProjectile"))
         {
-            Destroy(gameObject);
+            return;
         }
-        else
-        {
-            Destroy(gameObject);
-        }
+        Destroy(gameObject);
     }
-
 }

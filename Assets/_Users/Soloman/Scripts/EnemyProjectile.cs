@@ -11,13 +11,11 @@ public class EnemyProjectile : MonoBehaviour
         Destroy(gameObject, lifetime);
     }
 
-    void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        GameObject hitObject = collision.gameObject;
-
-        if (hitObject.CompareTag("Player"))
+        if ((collision.CompareTag("Enemy")) || (collision.CompareTag("PlayerProjectile")))
         {
-            // load game over or lose health
+            return;
         }
         else
         {

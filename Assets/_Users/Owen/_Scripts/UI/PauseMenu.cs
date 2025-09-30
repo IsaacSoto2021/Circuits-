@@ -9,6 +9,8 @@ public class PauseMenu : MonoBehaviour
     public GameObject _HUDCanvas;
     public GameObject _ConfirmAbandonCanvas;
 
+    public int _SceneToAbandonTo = 0;
+
     void Update()
     {
 
@@ -35,7 +37,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ConfirmAbandon()
     {
-        SceneManager.LoadSceneAsync(0);
+        SceneManager.LoadSceneAsync(_SceneToAbandonTo);
     }
 
     public void Return()

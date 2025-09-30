@@ -9,17 +9,30 @@ public class PlayerData : Singleton<PlayerData>
     public int _Hp = 0;
     public int _hpTier = 1;
     public int _scrap = 0;
-    public int _damage = 60;
+    public int _damage = 50;
 
     public bool _hasKeycard;
 
-    public void Spawn()
+    public void SetValues()
     {
         _Hp = _maxHp;
     }
 
     private void Start()
     {
-        Spawn();
+        SetValues();
     }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.CompareTag("EnemyProjectile20"))
+        {
+            _Hp -= 20;
+            if (_Hp <= 0)
+            {
+                //call gameover from gamemanger
+            }
+        }
+    }
+    
 }
