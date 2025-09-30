@@ -10,6 +10,7 @@ public class PlayerData : Singleton<PlayerData>
     public int _hpTier = 1;
     public int _scrap = 0;
     public int _damage = 50;
+    public float _moveSpeed = 3.0f;
 
     public bool _hasKeycard;
 

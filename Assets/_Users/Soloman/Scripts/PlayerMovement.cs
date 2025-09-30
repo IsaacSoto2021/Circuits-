@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float moveSpeed = PlayerData.Instance._moveSpeed;
 
     private Rigidbody rb;
     private Vector3 movement;

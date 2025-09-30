@@ -9,6 +9,9 @@ TagManager:
   - RoamPoint
   - PlayerProjectile
   - EnemyProjectile20
+  - MaxHpUpgrade
+  - SpeedUpgrade
+  - DamageUpgrade
   layers:
   - Default
   - TransparentFX
