@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = PlayerData.Instance._moveSpeed;
+    public float moveSpeed = 3.0f;
 
     private Rigidbody rb;
     private Vector3 movement;
@@ -13,13 +13,14 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezeRotation;
+        moveSpeed = PlayerData.Instance._moveSpeed;
     }
 
     // Update is called once per frame
