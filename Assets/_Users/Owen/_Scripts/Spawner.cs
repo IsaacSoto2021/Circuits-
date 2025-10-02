@@ -11,20 +11,9 @@ public class Spawner : MonoBehaviour
     public GameObject _enemy4;
     public Transform _enemySpawn;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (GameManager.Instance._spawnWave)
-        {
-            SpawnEnemy();
-            GameManager.Instance._spawnWave = false;
-        }
+        SpawnEnemy();
     }
 
     public void SpawnEnemy()

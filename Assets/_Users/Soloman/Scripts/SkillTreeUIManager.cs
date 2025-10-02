@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class SkillTreeUIManager : Singleton<SkillTreeUIManager>
+public class SkillTreeUIManager : MonoBehaviour
 {
     public TMP_Text _MaxHP1;
     public TMP_Text _Speed1;
@@ -13,7 +14,7 @@ public class SkillTreeUIManager : Singleton<SkillTreeUIManager>
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -26,5 +27,10 @@ public class SkillTreeUIManager : Singleton<SkillTreeUIManager>
         _MaxHP1.SetText("Max HP: " + _MaxHP);
         _Speed1.SetText("Speed: " + _Speed);
         _Damage1.SetText("Damage: " + _Damage);
+    }
+
+    public void ClickReturn()
+    {
+        SceneManager.LoadScene(0);
     }
 }

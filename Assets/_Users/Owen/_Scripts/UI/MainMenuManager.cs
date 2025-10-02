@@ -20,12 +20,12 @@ public class MainMenuManager : MonoBehaviour
     }
     public void ClickPlay()
     {
+        PlayerData.Instance.LoseTempScrap();
         GameManager.Instance.Play();
-        GameManager.Instance._spawnWave = true;
     }
-    public void ClickShop()
+    public void ClickSkillTree()
     {
-        GameManager.Instance.Shop();
+        GameManager.Instance.SkillTree();
     }
     public void ClickReturn()
     {

@@ -13,7 +13,7 @@ public class HUDManager : MonoBehaviour
     void Update()
     {
         int _Hp = PlayerData.Instance._Hp;
-        int _Scrap = PlayerData.Instance._scrap;
+        int _Scrap = PlayerData.Instance._scrap + PlayerData.Instance._scrapToAdd;
 
         _HpText.SetText("" + _Hp);
         _ScrapText.SetText("" + _Scrap);

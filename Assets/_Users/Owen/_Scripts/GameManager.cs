@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
-    public bool _spawnWave = false;
 
     public GameObject _playerControllerPrefab;
 
@@ -22,11 +21,6 @@ public class GameManager : Singleton<GameManager>
         _playerControllerPrefab.transform.position = _spawnPoint.transform.position;
         PlayerData.Instance.SetValues();
     }
-    public void spawn()
-    {
-        Instantiate(_playerControllerPrefab, _spawnPoint);
-        PlayerData.Instance.SetValues();
-    }
     public void Quit()
     {
         print("Quit Game");
@@ -36,10 +30,11 @@ public class GameManager : Singleton<GameManager>
     {
         SceneManager.LoadScene(1);
         ResetPos();
+        PlayerData.Instance.SetValues();
     }
-    public void Shop()
+    public void SkillTree()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadSceneAsync(2);
     }
     public void Return()
     {

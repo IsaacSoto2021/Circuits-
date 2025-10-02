@@ -12,10 +12,23 @@ public class PlayerProjectile : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.CompareTag("EnemyProjectile20"))
+        if (collision.CompareTag("Player"))
         {
             return;
         }
-        Destroy(gameObject);
+        else
+        {
+            Destroy(gameObject);
+
+        }
+    }
+    private void ActivateRandomTimes()
+    {
+        int times = Random.Range(0, 5);
+
+        for (int i = 0; i < times; i++)
+        {
+            PlayerData.Instance._scrapToAdd++;
+        }
     }
 }

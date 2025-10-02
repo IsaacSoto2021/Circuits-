@@ -36,6 +36,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ConfirmAbandon()
     {
+        PlayerData.Instance.LoseTempScrap();
         SceneManager.LoadScene(0);
     }
 

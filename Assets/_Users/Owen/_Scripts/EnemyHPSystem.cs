@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyHPSystem : MonoBehaviour
 {
     public int _HP = 100;
-    public int _Damage = 20;
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -20,7 +19,18 @@ public class EnemyHPSystem : MonoBehaviour
         _HP -= PlayerData.Instance._damage;
         if (_HP <= 0)
         {
+            ActivateRandomTimes();
             Destroy(gameObject);
+        }
+    }
+
+    private void ActivateRandomTimes()
+    {
+        int times = Random.Range(0, 5);
+
+        for (int i = 0; i < times; i++)
+        {
+            PlayerData.Instance._scrapToAdd++;
         }
     }
 }

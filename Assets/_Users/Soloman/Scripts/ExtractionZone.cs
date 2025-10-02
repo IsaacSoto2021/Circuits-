@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ExtractionZone : MonoBehaviour
 {
-    public float requiredTimeInZone = 10f;
-    public string winSceneName = "WinScreen"; // Set to name of win scene
+    public float requiredTimeInZone = 5f;
 
     private float timer = 0f;
     private bool playerInside = false;
@@ -37,8 +36,9 @@ public class ExtractionZone : MonoBehaviour
 
             if (timer >= requiredTimeInZone)
             {
-                Debug.Log("Player extracted! Loading win scene: " + winSceneName);
-                SceneManager.LoadScene(winSceneName);
+                Debug.Log("Player extracted!");
+                PlayerData.Instance.GainTempScrap();
+                SceneManager.LoadScene(0);
             }
         }
     }

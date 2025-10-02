@@ -34,6 +34,6 @@ public class EnemyLootDrops : MonoBehaviour
 
     private void AddScrap()
     {
-        PlayerData.Instance._scrap++;
+        PlayerData.Instance._scrapToAdd++;
     }
 }
